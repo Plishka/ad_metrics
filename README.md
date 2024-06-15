@@ -8,7 +8,7 @@ Combining data from two tables (Facebook and Google ad campaigns) in the Postgre
 - Decode Cyrillic characters in `utm_campaign`.
 - Calculate the following metrics for the campaigns: CTR (Click-Through Rate), CPC (Cost Per Click), CPM (Cost Per Thousand Impressions), ROMI (Return on Marketing Investment).
 - Determine the differences for `CPM`, `CTR`, and `ROMI` in the current month compared to the previous month in percentage terms.
-- Build an interactive dashboard using Looker Studio to display the results.
+- Build an interactive [Dashboard](https://lookerstudio.google.com/reporting/53f08051-f147-4132-88cd-cf997aeb9770/page/rfDeD) using Looker Studio to display the results.
 
 ### **Steps**
 
