@@ -2,13 +2,12 @@
 
 ## **Facebook and Google Ad Campaigns Analysis**
 
-### **Task**
 Combining data from two tables (Facebook and Google ad campaigns) in the PostgreSQL database, the analysis aims to:
 - Extract the campaign name (`utm_campaign`) from the `url_parameters` string.
 - Decode Cyrillic characters in `utm_campaign`.
 - Calculate the following metrics for the campaigns: CTR (Click-Through Rate), CPC (Cost Per Click), CPM (Cost Per Thousand Impressions), ROMI (Return on Marketing Investment).
 - Determine the differences for `CPM`, `CTR`, and `ROMI` in the current month compared to the previous month in percentage terms.
-- Build an interactive [Dashboard](https://lookerstudio.google.com/reporting/53f08051-f147-4132-88cd-cf997aeb9770/page/rfDeD) using Looker Studio to display the results.
+- Build an interactive Dashboard using Looker Studio to display the results.
 
 ### **Advanced Functions and Approaches Used**
 - **CTEs (Common Table Expressions)**: To structure the query and make it more readable.
@@ -19,7 +18,13 @@ Combining data from two tables (Facebook and Google ad campaigns) in the Postgre
 - **Self-Join**: To shift the metrics by one month for comparison.
 - **Conditional Logic**: To avoid division by zero and handle edge cases in percentage change calculations.
 
-### [Dashboard](https://lookerstudio.google.com/reporting/53f08051-f147-4132-88cd-cf997aeb9770/page/rfDeD)
+### Dashboard
+
+Click the image below to view the interactive Dashboard on Looker Studio website.
+
+[![Revenue Metrics Dashboard](https://github.com/Plishka/ad_metrics/blob/main/Ad_campaigns.png?raw=true)](https://lookerstudio.google.com/reporting/53f08051-f147-4132-88cd-cf997aeb9770/page/rfDeD)
+
+
 The results of the analysis are visualized using an interactive dashboard built with Looker Studio. The dashboard displays:
 - Monthly metrics (CTR, CPC, CPM, ROMI) for each campaign.
 - The percentage change in `CPM`, `CTR`, and `ROMI` compared to the previous month.
