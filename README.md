@@ -10,6 +10,22 @@ Combining data from two tables (Facebook and Google ad campaigns) in the Postgre
 - Determine the differences for `CPM`, `CTR`, and `ROMI` in the current month compared to the previous month in percentage terms.
 - Build an interactive [Dashboard](https://lookerstudio.google.com/reporting/53f08051-f147-4132-88cd-cf997aeb9770/page/rfDeD) using Looker Studio to display the results.
 
+### **Advanced Functions and Approaches Used**
+- **CTEs (Common Table Expressions)**: To structure the query and make it more readable.
+- **COALESCE Function**: To handle missing values by replacing them with `0`.
+- **Substring and Case Functions**: To extract and handle the `utm_campaign` from `url_parameters`.
+- **Custom Function**: `decode_cyrillic_url` to decode Cyrillic characters.
+- **Aggregation and Grouping**: To calculate the metrics by month.
+- **Self-Join**: To shift the metrics by one month for comparison.
+- **Conditional Logic**: To avoid division by zero and handle edge cases in percentage change calculations.
+
+### [Dashboard](https://lookerstudio.google.com/reporting/53f08051-f147-4132-88cd-cf997aeb9770/page/rfDeD)
+The results of the analysis are visualized using an interactive dashboard built with Looker Studio. The dashboard displays:
+- Monthly metrics (CTR, CPC, CPM, ROMI) for each campaign.
+- The percentage change in `CPM`, `CTR`, and `ROMI` compared to the previous month.
+
+---
+
 ### **Steps**
 
 1. **Create Temporary Function**
@@ -183,18 +199,3 @@ Combining data from two tables (Facebook and Google ad campaigns) in the Postgre
      from shifted
      ```
 
-### [Dashboard](https://lookerstudio.google.com/reporting/53f08051-f147-4132-88cd-cf997aeb9770/page/rfDeD)
-The results of the analysis are visualized using an interactive dashboard built with Looker Studio. The dashboard displays:
-- Monthly metrics (CTR, CPC, CPM, ROMI) for each campaign.
-- The percentage change in `CPM`, `CTR`, and `ROMI` compared to the previous month.
-
-### **Advanced Functions and Approaches Used**
-- **CTEs (Common Table Expressions)**: To structure the query and make it more readable.
-- **COALESCE Function**: To handle missing values by replacing them with `0`.
-- **Substring and Case Functions**: To extract and handle the `utm_campaign` from `url_parameters`.
-- **Custom Function**: `decode_cyrillic_url` to decode Cyrillic characters.
-- **Aggregation and Grouping**: To calculate the metrics by month.
-- **Self-Join**: To shift the metrics by one month for comparison.
-- **Conditional Logic**: To avoid division by zero and handle edge cases in percentage change calculations.
-
----
